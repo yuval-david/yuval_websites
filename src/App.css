@@ -1,0 +1,709 @@
+/****** YUVAL WEBSITES *****/
+/********* CSS FILE ********/
+/****** YUVAL DAVID *******/
+
+/* Whole Page */
+html, body {
+  scroll-behavior: smooth;
+  /* width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;  */
+}
+
+/* .app {
+  overflow-x: hidden;
+  position: relative;
+} */
+
+/* HEADER */
+
+.header-container {
+  text-align: center;
+  height: 580px;
+  line-height: 300px;
+  margin: 0 auto;
+  background-image: url('https://images.pexels.com/photos/317355/pexels-photo-317355.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'); 
+  background-image: url('https://images.pexels.com/photos/895465/pexels-photo-895465.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  font-size: 38px;
+  padding: 25px;
+  font-family: Delius;
+}
+
+
+#main-header {
+  margin-left: -3000px;
+  transition: 2s;
+  text-shadow: black 4px 4px 10px;
+  text-shadow: rgb(22, 7, 7) 4px 4px 8px;
+}
+
+/* TO TOP - BUTTON */
+#top-btn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: rgb(70, 7, 45); /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 50px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}
+
+/* ABOUT */
+
+.about-container {
+  text-align: center;
+  padding: 25px;
+  height: 600px;
+  background-color: rgb(252, 250, 244);
+  font-family: Delius;
+}
+
+.about-p {
+  color: rgb(51, 50, 50);
+  font-size: 28px;
+  margin-right: 200px;
+  margin-left: 200px;
+  
+}
+
+.about-container h1 {
+  padding: 0;
+  color: rgb(51, 50, 50);
+}
+
+.about-flex {
+  display: flex;
+}
+
+.about-image {
+  padding: 20px;
+  width: 320px;
+  height: 250px;
+}
+
+/* GALLERY */
+
+.gallery-container{
+  height: 840px;
+  background-image: url('https://images.pexels.com/photos/168442/pexels-photo-168442.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+  background-image: url('https://images.pexels.com/photos/172296/pexels-photo-172296.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+  background-image: url('https://images.pexels.com/photos/895465/pexels-photo-895465.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500');
+  background-color: black;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 25px;
+  text-align: center;
+  font-family: Delius;
+}
+
+.gallery-container > h1 {
+  font-size: 54px;
+  color: rgb(221, 209, 209);
+  color: black;
+  font-weight: bold;
+  text-shadow: rgb(75, 40, 45) 3px 3px 3px;
+}
+
+.videos-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.video-card {
+  margin: 20px;
+  padding-top: 0;
+  padding-bottom: 0;
+  background-color: blanchedalmond;
+  background-color: rgb(221, 209, 209);
+  box-shadow: rgb(246, 201, 201) 0 0 2px 2px;
+  box-shadow: rgb(221, 209, 209) 0 0 2px 2px;
+}
+
+.video-card:hover {
+  box-shadow: rgb(243, 233, 233) 0 0 5px 5px;
+  transition-duration: 0.3s;
+}
+
+.video-card video {
+  width:300px;
+  height:180px ;
+}
+
+.video-name a {
+  font-weight: bold;
+  color: rgb(75, 74, 74);
+  cursor: pointer;
+}
+
+.video-name a i {
+  margin: 2px;
+}
+
+.video-name a:hover {
+  text-decoration-line: underline;
+  color: rgb(36, 35, 35);
+
+}
+
+.project-info {
+  display: none;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-right: 1px;
+  padding-left: 1px;
+
+}
+
+#modal-bg {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top:0;
+  left:0;
+  text-align: center;
+}
+
+.popup{
+  text-align: center;
+  border: black solid 1px;
+  position: relative;
+  background-color: black;
+  opacity: 0.95;
+  margin-left: 20vw;
+  margin-right: 20vw;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  width: 800px;
+  height: 500px;
+}
+
+#close {
+  font-size: 24px;
+  color: beige;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+/* Title - i - Projects */
+
+[data-title]:hover:after {
+  opacity: 1;
+  transition: all 0.1s ease 0.5s;
+  visibility: visible;
+}
+
+[data-title]:after {
+  content: attr(data-title);
+  position: absolute;
+  bottom: -1.6em;
+  left: 100%;
+  padding: 5px 5px 5px 8px;
+  color: rgb(65, 65, 65);
+  white-space: nowrap; 
+  -moz-border-radius: 5px; 
+  -webkit-border-radius: 5px;  
+  border-radius: 5px;  
+  -moz-box-shadow: 0px 0px 4px #222;  
+  -webkit-box-shadow: 0px 0px 4px #222;  
+  box-shadow: 0px 0px 4px #222;  
+  background-image: -moz-linear-gradient(top, #f8f8f8, #cccccc);  
+  background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #f8f8f8),color-stop(1, #cccccc));
+  background-image: -webkit-linear-gradient(top, #f8f8f8, #cccccc);  
+  background-image: -moz-linear-gradient(top, #f8f8f8, #cccccc);  
+  background-image: -ms-linear-gradient(top, #f8f8f8, #cccccc);  
+  background-image: -o-linear-gradient(top, #f8f8f8, #cccccc);
+  background-color: rgb(240, 202, 202);
+  /* font-weight: bold; */
+  font-family: sans-serif;
+  opacity: 0;
+  z-index: 99999;
+  visibility: hidden;
+}
+
+[data-title] {
+  position: relative;
+  
+}
+
+/* PARRALAX */
+.parallax-container-1 {
+  height: 400px;
+  background-image: url('https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.parallax-container-2 {
+  height: 400px;
+  background-image: url('https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* ABOUT ME */
+.aboutMe-container {
+  text-align: center;
+  padding: 25px;
+  height: 700px;
+  background-color: rgb(252, 250, 244);
+  font-family: Delius;
+}
+
+.aboutMe-container > h1 {
+  padding: 10px;
+  font-size: 50px;
+  color: rgb(51, 50, 50);
+}
+
+.me-div {
+  display: flex;
+  padding: 20px;
+  color: rgb(51, 50, 50);
+}
+
+.me-text{
+  flex-grow: 1;
+  font-size: 26px;
+  padding: 10px;
+  margin-left: 20px;
+  margin-right: 50px;
+  text-align: left;
+}
+
+.me-text ul {
+  font-size: 22px;
+}
+
+.me-pic {
+ margin-top: 40px;
+ flex-grow: 1;
+}
+
+.me-pic img {
+  border-radius: 30px;
+  box-shadow: rgb(27, 1, 5) 0 0 8px 3px;
+}
+
+
+/* CONTACT */
+
+.contact-container {
+  height: 570px;
+  padding: 25px;
+  text-align: center;
+  background-image: url('https://images.pexels.com/photos/3184460/pexels-photo-3184460.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+  background-image: url('https://images.pexels.com/photos/97987/pexels-photo-97987.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: Delius;
+}
+
+.contact-header {
+  font-size: 50px;
+  color: beige;
+  text-shadow: black 3px 3px 6px;
+}
+
+.contact-p {
+  padding: 10px;
+  color: bisque;
+  font-size: 24px;
+}
+
+.social-media-list {
+  list-style: none;
+  margin-top: 100px;
+
+}
+
+.social-media-list a {
+  text-decoration-line: none;
+  padding: 15px;
+  color: rgb(44, 13, 13);
+}
+
+.social-media-list a :hover {
+  text-shadow: beige 3px 3px 4px;
+  transition-duration: 0.5s;
+}
+
+.copyright {
+  position: relative;
+  top: 30vh;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/*** MEDIA QUERIES ***/
+
+/* For big screen */
+ @media screen and (min-width: 1400px) {
+
+  /* HEADER */
+  .header-container {
+    height: 1200px;
+    line-height: 700px;
+    font-size: 48px;
+  }
+
+  /* ABOUT */
+  .about-container {
+    height: 1100px;
+    padding: 100px;
+  }
+  .about-container h1 {
+    font-size: 48px;
+    padding: 0;
+    color: rgb(51, 50, 50);
+  }
+  .about-p {
+    font-size: 38px;
+  }
+  .about-image {
+    padding: 80px;
+    width: 420px;
+    height: 350px;
+  }
+
+  /* GALLERY */
+  .gallery-container{
+    height: 920px;
+    background-attachment: fixed;
+    padding: 50px;
+    text-align: center;
+  }
+  .gallery-container h1 {
+    font-size: 62px;
+  }
+  .videos-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-right: 300px;
+    margin-left: 300px;
+    padding: 30px;
+  }
+  .video-card {
+    margin: 30px;
+  }
+
+  .popup{
+    text-align: center;
+    border: black solid 1px;
+    position: relative;
+    background-color: black;
+    opacity: 0.95;
+    margin-left: 30vw;
+    margin-right: 30vw;
+    margin-top: 20vh;
+    margin-bottom: 5vh;
+    width: 800px;
+    height: 500px;
+  }
+ 
+  /* CONTACT */
+  .contact-container {
+    height: 800px;
+    padding: 100px;
+    text-align: center;
+  }
+  .contact-header {
+    font-size: 70px;
+  }
+  .contact-p {
+    padding: 10px;
+    color: bisque;
+    font-size: 34px;
+  }
+  .social-media-list a {
+    padding: 20px;
+
+  }
+
+  .copyright {
+    position: relative;
+    top: 40vh;
+    font-size: 22px;
+  }
+} 
+
+/* For Middle */
+@media screen and (max-width: 1440px){
+ .gallery-container {
+   height: 900px;
+ }
+
+ .video-card {
+   margin: 20px;
+ }
+ 
+}
+
+/* For small screen */
+@media screen and (max-width: 1024px){
+
+   /* HEADER */
+   .header-container {
+    height: 900px;
+    line-height: 600px;
+    padding: 30px;
+  }
+
+  /* ABOUT */
+  .about-container {
+    height: 900px;
+    padding: 30px;
+  }
+  .about-container h1 {
+    margin-top: 50px;
+  }
+  .about-p {
+    margin-top: 70px;
+  }
+
+ /* GALLERY */
+ .gallery-container{
+  height: 1000px;
+}
+
+.video-card {
+  margin: 20px;
+}
+
+  /* CONTACT */
+  .contact-container {
+    height: 750px;
+    padding: 80px;
+  }
+
+}
+
+/* For Tablets */
+@media screen and (max-width: 768px){
+  /* HEADER */
+  .header-container {
+    height: 900px;
+    padding: 30px;
+  }
+
+  /* ABOUT */
+  .about-container {
+    height: 1000px;
+    padding: 30px;
+  }
+  .about-container h1 {
+    margin-top: 50px;
+  }
+  .about-p {
+    margin-top: 70px;
+  }
+
+  /*ABOUT ME*/
+  .aboutMe-container {
+    height: 900px;
+  }
+
+  /* GALLERY */
+    .gallery-container{
+     height: 1000px;
+  }
+   
+  /* CONTACT */
+  .contact-container {
+    height: 740px;
+    padding: 80px;
+  }
+     
+}
+
+@media screen and (max-width: 746px){
+  .gallery-container {
+    height: 1700px;
+  }
+
+  .me-text {
+    font-size: 20px;
+  }
+
+  .me-text ul {
+    font-size: 18px;
+  }
+
+  .me-pic {
+    width: 100px;
+    height: 150px;
+  }
+}
+
+/* For Smartphones */
+@media screen and (max-width: 426px){
+
+  /* TO TOP - BUTTON */
+  #top-btn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 15px; /* Place the button at the bottom of the page */
+    left: 15px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: rgb(70, 7, 45); /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 10px; /* Some padding */
+    border-radius: 50px; /* Rounded corners */
+    font-size: 12px; /* Increase font size */
+  }
+
+  /* HEADER */
+  .header-container {
+    height: 900px;
+    line-height: 300px;
+    font-size: 30px;
+    padding: 20px;
+  }
+
+    /* ABOUT */
+    .about-container {
+      height: 920px;
+      padding: 20px;
+    }
+
+    .about-p {
+      font-size: 22px;
+      margin-left: 5px;
+      margin-right: 5px;
+   
+    }
+    .about-image {
+      margin-top: 40px;
+      width: 300px;
+    }
+
+    /* GALLERY */
+  .gallery-container{
+    height: 1700px;
+  }
+
+  /* ANOUT ME */
+
+  .aboutMe-container {
+    text-align: center;
+    padding: 25px;
+    height: 1000px;
+    background-color: rgb(252, 250, 244);
+    font-family: Delius;
+  }
+
+  .me-div {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    color: rgb(51, 50, 50);
+  }
+
+  .me-text{
+    font-size: 22px;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .me-text ul {
+    font-size: 18px;
+  }
+  
+  .me-pic img {
+    border-radius: 20px;
+    box-shadow: rgb(133, 91, 98) 0 0 3px 3px;
+    width: 150px;
+    height: 200px;
+    margin-left: 110px;
+  }
+
+  /* PARRALAX */
+  
+  .parallax-container-2 {
+    height: 250px;
+    background-image: url('https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+
+  /* CONTACT */
+  .contact-container {
+    height: 700px;
+    padding: 80px;
+  }
+
+  .social-media-list a {
+    text-decoration-line: none;
+    padding: 5px;
+    color: rgb(44, 13, 13);
+  }
+    
+}
+
+/* For little Smartphones */
+@media screen and (max-width: 376px){
+
+  /*ABOUT*/
+  .about-p{
+    margin-left: 5px;
+      margin-right: 5px;
+  }
+
+  .about-image {
+    margin-top: 40px;
+    width: 220px;
+    height: 200px;
+  }
+
+  /*ABOUT ME*/
+  .aboutMe-container {
+
+    padding: 10px;
+    height: 1100px;
+    
+  }
+  
+
+   /* CONTACT */
+   .contact-container {
+    height: 820px;
+    padding: 20px;
+  }
+
+  .me-pic img {
+    border-radius: 20px;
+    box-shadow: rgb(133, 91, 98) 0 0 3px 3px;
+    width: 150px;
+    height: 200px;
+    margin-left: 80px;
+  }
+}
